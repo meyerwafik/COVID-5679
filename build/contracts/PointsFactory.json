@@ -1,0 +1,4229 @@
+{
+  "contractName": "PointsFactory",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [],
+      "name": "NewPoint",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "isOwner",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "pointToOwner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "points",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        },
+        {
+          "internalType": "enum PointsFactory.types",
+          "name": "Mytype",
+          "type": "uint8"
+        },
+        {
+          "internalType": "bool",
+          "name": "tradable",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "renounceOwnership",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "name": "typetostring",
+      "outputs": [
+        {
+          "internalType": "enum PointsFactory.types",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "id",
+              "type": "uint256"
+            },
+            {
+              "internalType": "enum PointsFactory.types",
+              "name": "Mytype",
+              "type": "uint8"
+            },
+            {
+              "internalType": "bool",
+              "name": "tradable",
+              "type": "bool"
+            }
+          ],
+          "internalType": "struct PointsFactory.Point",
+          "name": "p",
+          "type": "tuple"
+        }
+      ],
+      "name": "getmytype",
+      "outputs": [
+        {
+          "internalType": "enum PointsFactory.types",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[],\"name\":\"NewPoint\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"constant\":false,\"inputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"internalType\":\"enum PointsFactory.types\",\"name\":\"Mytype\",\"type\":\"uint8\"},{\"internalType\":\"bool\",\"name\":\"tradable\",\"type\":\"bool\"}],\"internalType\":\"struct PointsFactory.Point\",\"name\":\"p\",\"type\":\"tuple\"}],\"name\":\"getmytype\",\"outputs\":[{\"internalType\":\"enum PointsFactory.types\",\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"isOwner\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"pointToOwner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"points\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"internalType\":\"enum PointsFactory.types\",\"name\":\"Mytype\",\"type\":\"uint8\"},{\"internalType\":\"bool\",\"name\":\"tradable\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"name\":\"typetostring\",\"outputs\":[{\"internalType\":\"enum PointsFactory.types\",\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"isOwner()\":{\"return\":\"true if msg.sender is the owner of the contract.\"},\"owner()\":{\"return\":\"the address of the owner.\"},\"renounceOwnership()\":{\"details\":\"Allows the current owner to relinquish control of the contract.\"},\"transferOwnership(address)\":{\"details\":\"Allows the current owner to transfer control of the contract to a newOwner.\",\"params\":{\"newOwner\":\"The address to transfer ownership to.\"}}}},\"userdoc\":{\"methods\":{\"renounceOwnership()\":{\"notice\":\"Renouncing to ownership will leave the contract without an owner. It will not be possible to call the functions with the onlyOwner modifier anymore.\"}}}},\"settings\":{\"compilationTarget\":{\"/E/Uni/Junior/COVID - 5679/contracts/PointsFactory.sol\":\"PointsFactory\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/E/Uni/Junior/COVID - 5679/contracts/ERC721.sol\":{\"keccak256\":\"0x3be0a1496f83a02c24b9d47d61055e92ec47e6d32958b19f8d02dead2a305b3a\",\"urls\":[\"bzz-raw://21ca6c39948d9e3b532a187dfd1681a019e61e0fc97581bc8e9a48a087d4879b\",\"dweb:/ipfs/QmcJ9tsJP7HzFyF7NQJAtZMcJvbAgSrU7MBWfqeHBtDHzx\"]},\"/E/Uni/Junior/COVID - 5679/contracts/Ownable.sol\":{\"keccak256\":\"0xaf6980900b174d00b70dad751e7342bb9ae9ab7d7a1321094affb5e3306baba6\",\"urls\":[\"bzz-raw://1465608a49fe680e3e22efeff3fec0d34a696f29f822bfa0f400222d85eac5fd\",\"dweb:/ipfs/QmXmox5vTJrN2aepVwkWz45M2ec8mkyEUWPE4Tk3vDWPRC\"]},\"/E/Uni/Junior/COVID - 5679/contracts/OwnerFactory.sol\":{\"keccak256\":\"0x86ae693bd9ebd20b8c2a89d6a06c0889cff3ef5f169a278f3c5daa93b814d53d\",\"urls\":[\"bzz-raw://8dd047270b12efb98170b66f6cb21d8bbb2f8615734eaf74a23c10f78d2da1a1\",\"dweb:/ipfs/QmYkQ8AUfYa48t2yxoHKX2TyrBdqVe6D4M3hiUamaRpiFh\"]},\"/E/Uni/Junior/COVID - 5679/contracts/PointsFactory.sol\":{\"keccak256\":\"0x16df7a8a562f87ebb40f108254a7636b9a6504eecf12ae2588f8cadefbd78a8e\",\"urls\":[\"bzz-raw://dfe7bc1324f49357df625fa028da98287ddd06f44c4993f40159f485541ba1bf\",\"dweb:/ipfs/Qmb2sjUUQojh1CM3RmmA2z8rQDmWUDJ37rdA5uLi6si6Gu\"]}},\"version\":1}",
+  "bytecode": "0x60806040526000600155336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16600073ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a36108e0806100d46000396000f3fe608060405234801561001057600080fd5b50600436106100885760003560e01c80638f32d59b1161005b5780638f32d59b146101155780639799b4e714610133578063e0b3652b14610165578063f2fde38b1461019557610088565b806347db4f241461008d57806351517a66146100bd578063715018a6146100ed5780638da5cb5b146100f7575b600080fd5b6100a760048036036100a29190810190610650565b6101b1565b6040516100b49190610714565b60405180910390f35b6100d760048036036100d2919081019061060f565b6101bf565b6040516100e49190610714565b60405180910390f35b6100f56101f5565b005b6100ff6102c5565b60405161010c91906106de565b60405180910390f35b61011d6102ee565b60405161012a91906106f9565b60405180910390f35b61014d60048036036101489190810190610679565b610345565b60405161015c9392919061072f565b60405180910390f35b61017f600480360361017a9190810190610679565b610396565b60405161018c91906106de565b60405180910390f35b6101af60048036036101aa91908101906105e6565b6103c9565b005b600081602001519050919050565b6005818051602081018201805184825260208301602085012081835280955050505050506000915054906101000a900460ff1681565b6101fd6102ee565b61020657600080fd5b600073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a360008060006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614905090565b6002818154811061035257fe5b90600052602060002090600202016000915090508060000154908060010160009054906101000a900460ff16908060010160019054906101000a900460ff16905083565b60036020528060005260406000206000915054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6103d16102ee565b6103da57600080fd5b6103e3816103e6565b50565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff16141561042057600080fd5b8073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a3806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555050565b6000813590506104ed81610848565b92915050565b6000813590506105028161085f565b92915050565b60008135905061051781610876565b92915050565b600082601f83011261052e57600080fd5b813561054161053c82610793565b610766565b9150808252602083016020830185838301111561055d57600080fd5b61056883828461082c565b50505092915050565b60006060828403121561058357600080fd5b61058d6060610766565b9050600061059d848285016105d1565b60008301525060206105b184828501610508565b60208301525060406105c5848285016104f3565b60408301525092915050565b6000813590506105e081610886565b92915050565b6000602082840312156105f857600080fd5b6000610606848285016104de565b91505092915050565b60006020828403121561062157600080fd5b600082013567ffffffffffffffff81111561063b57600080fd5b6106478482850161051d565b91505092915050565b60006060828403121561066257600080fd5b600061067084828501610571565b91505092915050565b60006020828403121561068b57600080fd5b6000610699848285016105d1565b91505092915050565b6106ab816107bf565b82525050565b6106ba816107d1565b82525050565b6106c98161081a565b82525050565b6106d881610810565b82525050565b60006020820190506106f360008301846106a2565b92915050565b600060208201905061070e60008301846106b1565b92915050565b600060208201905061072960008301846106c0565b92915050565b600060608201905061074460008301866106cf565b61075160208301856106c0565b61075e60408301846106b1565b949350505050565b6000604051905081810181811067ffffffffffffffff8211171561078957600080fd5b8060405250919050565b600067ffffffffffffffff8211156107aa57600080fd5b601f19601f8301169050602081019050919050565b60006107ca826107f0565b9050919050565b60008115159050919050565b60008190506107eb8261083b565b919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000819050919050565b6000610825826107dd565b9050919050565b82818337600083830152505050565b6006811061084557fe5b50565b610851816107bf565b811461085c57600080fd5b50565b610868816107d1565b811461087357600080fd5b50565b6006811061088357600080fd5b50565b61088f81610810565b811461089a57600080fd5b5056fea365627a7a7231582027c43fe6f8d84bb6bfa64f175d18bb74758b9f3d6f75ce1bc375536a43e8d2336c6578706572696d656e74616cf564736f6c63430005100040",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100885760003560e01c80638f32d59b1161005b5780638f32d59b146101155780639799b4e714610133578063e0b3652b14610165578063f2fde38b1461019557610088565b806347db4f241461008d57806351517a66146100bd578063715018a6146100ed5780638da5cb5b146100f7575b600080fd5b6100a760048036036100a29190810190610650565b6101b1565b6040516100b49190610714565b60405180910390f35b6100d760048036036100d2919081019061060f565b6101bf565b6040516100e49190610714565b60405180910390f35b6100f56101f5565b005b6100ff6102c5565b60405161010c91906106de565b60405180910390f35b61011d6102ee565b60405161012a91906106f9565b60405180910390f35b61014d60048036036101489190810190610679565b610345565b60405161015c9392919061072f565b60405180910390f35b61017f600480360361017a9190810190610679565b610396565b60405161018c91906106de565b60405180910390f35b6101af60048036036101aa91908101906105e6565b6103c9565b005b600081602001519050919050565b6005818051602081018201805184825260208301602085012081835280955050505050506000915054906101000a900460ff1681565b6101fd6102ee565b61020657600080fd5b600073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a360008060006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614905090565b6002818154811061035257fe5b90600052602060002090600202016000915090508060000154908060010160009054906101000a900460ff16908060010160019054906101000a900460ff16905083565b60036020528060005260406000206000915054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6103d16102ee565b6103da57600080fd5b6103e3816103e6565b50565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff16141561042057600080fd5b8073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a3806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555050565b6000813590506104ed81610848565b92915050565b6000813590506105028161085f565b92915050565b60008135905061051781610876565b92915050565b600082601f83011261052e57600080fd5b813561054161053c82610793565b610766565b9150808252602083016020830185838301111561055d57600080fd5b61056883828461082c565b50505092915050565b60006060828403121561058357600080fd5b61058d6060610766565b9050600061059d848285016105d1565b60008301525060206105b184828501610508565b60208301525060406105c5848285016104f3565b60408301525092915050565b6000813590506105e081610886565b92915050565b6000602082840312156105f857600080fd5b6000610606848285016104de565b91505092915050565b60006020828403121561062157600080fd5b600082013567ffffffffffffffff81111561063b57600080fd5b6106478482850161051d565b91505092915050565b60006060828403121561066257600080fd5b600061067084828501610571565b91505092915050565b60006020828403121561068b57600080fd5b6000610699848285016105d1565b91505092915050565b6106ab816107bf565b82525050565b6106ba816107d1565b82525050565b6106c98161081a565b82525050565b6106d881610810565b82525050565b60006020820190506106f360008301846106a2565b92915050565b600060208201905061070e60008301846106b1565b92915050565b600060208201905061072960008301846106c0565b92915050565b600060608201905061074460008301866106cf565b61075160208301856106c0565b61075e60408301846106b1565b949350505050565b6000604051905081810181811067ffffffffffffffff8211171561078957600080fd5b8060405250919050565b600067ffffffffffffffff8211156107aa57600080fd5b601f19601f8301169050602081019050919050565b60006107ca826107f0565b9050919050565b60008115159050919050565b60008190506107eb8261083b565b919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000819050919050565b6000610825826107dd565b9050919050565b82818337600083830152505050565b6006811061084557fe5b50565b610851816107bf565b811461085c57600080fd5b50565b610868816107d1565b811461087357600080fd5b50565b6006811061088357600080fd5b50565b61088f81610810565b811461089a57600080fd5b5056fea365627a7a7231582027c43fe6f8d84bb6bfa64f175d18bb74758b9f3d6f75ce1bc375536a43e8d2336c6578706572696d656e74616cf564736f6c63430005100040",
+  "sourceMap": "148:1123:4:-;;;364:1;355:10;;526::2;517:6;;:19;;;;;;;;;;;;;;;;;;581:6;;;;;;;;;;;548:40;;577:1;548:40;;;;;;;;;;;;148:1123:4;;;;;;",
+  "deployedSourceMap": "148:1123:4:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;148:1123:4;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1183:83;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;486:59;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;1298:130:2;;;:::i;:::-;;652:72;;;:::i;:::-;;;;;;;;;;;;;;;;948:85;;;:::i;:::-;;;;;;;;;;;;;;;;370:21:4;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;394:45;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;1592:103:2;;;;;;;;;;;;;;;;:::i;:::-;;1183:83:4;1234:5;1254:1;:8;;;1247:15;;1183:83;;;:::o;486:59::-;;;28:7:-1;22:14;169:4;160:7;156:18;147:7;143:32;204:13;198:20;246:8;231:13;224:31;316:4;307:7;303:18;296:4;287:7;283:18;273:49;350:9;335:13;328:32;378:4;366:16;;0:388;;;;486:59:4;;;;;;;;;;;;;:::o;1298:130:2:-;843:9;:7;:9::i;:::-;835:18;;;;;;1393:1;1356:40;;1377:6;;;;;;;;;;;1356:40;;;;;;;;;;;;1420:1;1403:6;;:19;;;;;;;;;;;;;;;;;;1298:130::o;652:72::-;689:7;712:6;;;;;;;;;;;705:13;;652:72;:::o;948:85::-;987:4;1021:6;;;;;;;;;;;1007:20;;:10;:20;;;1000:27;;948:85;:::o;370:21:4:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;394:45::-;;;;;;;;;;;;;;;;;;;;;;:::o;1592:103:2:-;843:9;:7;:9::i;:::-;835:18;;;;;;1661:28;1680:8;1661:18;:28::i;:::-;1592:103;:::o;1832:173::-;1922:1;1902:22;;:8;:22;;;;1894:31;;;;;;1966:8;1937:38;;1958:6;;;;;;;;;;;1937:38;;;;;;;;;;;;1991:8;1982:6;;:17;;;;;;;;;;;;;;;;;;1832:173;:::o;5:130:-1:-;;85:6;72:20;63:29;;97:33;124:5;97:33;;;57:78;;;;;142:124;;219:6;206:20;197:29;;231:30;255:5;231:30;;;191:75;;;;;273:148;;362:6;349:20;340:29;;374:42;410:5;374:42;;;334:87;;;;;429:434;;527:3;520:4;512:6;508:17;504:27;494:2;;545:1;542;535:12;494:2;582:6;569:20;604:61;619:45;657:6;619:45;;;604:61;;;595:70;;685:6;678:5;671:21;721:4;713:6;709:17;754:4;747:5;743:16;789:3;780:6;775:3;771:16;768:25;765:2;;;806:1;803;796:12;765:2;816:41;850:6;845:3;840;816:41;;;487:376;;;;;;;;904:618;;1015:4;1003:9;998:3;994:19;990:30;987:2;;;1033:1;1030;1023:12;987:2;1051:20;1066:4;1051:20;;;1042:29;;1119:1;1151:49;1196:3;1187:6;1176:9;1172:22;1151:49;;;1144:4;1137:5;1133:16;1126:75;1081:131;1264:2;1297:58;1351:3;1342:6;1331:9;1327:22;1297:58;;;1290:4;1283:5;1279:16;1272:84;1222:145;1421:2;1454:46;1496:3;1487:6;1476:9;1472:22;1454:46;;;1447:4;1440:5;1436:16;1429:72;1377:135;981:541;;;;;1529:130;;1609:6;1596:20;1587:29;;1621:33;1648:5;1621:33;;;1581:78;;;;;1666:241;;1770:2;1758:9;1749:7;1745:23;1741:32;1738:2;;;1786:1;1783;1776:12;1738:2;1821:1;1838:53;1883:7;1874:6;1863:9;1859:22;1838:53;;;1828:63;;1800:97;1732:175;;;;;1914:339;;2024:2;2012:9;2003:7;1999:23;1995:32;1992:2;;;2040:1;2037;2030:12;1992:2;2103:1;2092:9;2088:17;2075:31;2126:18;2118:6;2115:30;2112:2;;;2158:1;2155;2148:12;2112:2;2178:59;2229:7;2220:6;2209:9;2205:22;2178:59;;;2168:69;;2054:189;1986:267;;;;;2260:285;;2386:2;2374:9;2365:7;2361:23;2357:32;2354:2;;;2402:1;2399;2392:12;2354:2;2437:1;2454:75;2521:7;2512:6;2501:9;2497:22;2454:75;;;2444:85;;2416:119;2348:197;;;;;2552:241;;2656:2;2644:9;2635:7;2631:23;2627:32;2624:2;;;2672:1;2669;2662:12;2624:2;2707:1;2724:53;2769:7;2760:6;2749:9;2745:22;2724:53;;;2714:63;;2686:97;2618:175;;;;;2800:113;2883:24;2901:5;2883:24;;;2878:3;2871:37;2865:48;;;2920:104;2997:21;3012:5;2997:21;;;2992:3;2985:34;2979:45;;;3031:140;3121:44;3159:5;3121:44;;;3116:3;3109:57;3103:68;;;3178:113;3261:24;3279:5;3261:24;;;3256:3;3249:37;3243:48;;;3298:213;;3416:2;3405:9;3401:18;3393:26;;3430:71;3498:1;3487:9;3483:17;3474:6;3430:71;;;3387:124;;;;;3518:201;;3630:2;3619:9;3615:18;3607:26;;3644:65;3706:1;3695:9;3691:17;3682:6;3644:65;;;3601:118;;;;;3726:227;;3851:2;3840:9;3836:18;3828:26;;3865:78;3940:1;3929:9;3925:17;3916:6;3865:78;;;3822:131;;;;;3960:437;;4135:2;4124:9;4120:18;4112:26;;4149:71;4217:1;4206:9;4202:17;4193:6;4149:71;;;4231:79;4306:2;4295:9;4291:18;4282:6;4231:79;;;4321:66;4383:2;4372:9;4368:18;4359:6;4321:66;;;4106:291;;;;;;;4404:256;;4466:2;4460:9;4450:19;;4504:4;4496:6;4492:17;4603:6;4591:10;4588:22;4567:18;4555:10;4552:34;4549:62;4546:2;;;4624:1;4621;4614:12;4546:2;4644:10;4640:2;4633:22;4444:216;;;;;4667:318;;4807:18;4799:6;4796:30;4793:2;;;4839:1;4836;4829:12;4793:2;4906:4;4902:9;4895:4;4887:6;4883:17;4879:33;4871:41;;4970:4;4964;4960:15;4952:23;;4730:255;;;;4992:91;;5054:24;5072:5;5054:24;;;5043:35;;5037:46;;;;5090:85;;5163:5;5156:13;5149:21;5138:32;;5132:43;;;;5182:124;;5253:5;5242:16;;5259:42;5295:5;5259:42;;;5236:70;;;;5313:121;;5386:42;5379:5;5375:54;5364:65;;5358:76;;;;5441:72;;5503:5;5492:16;;5486:27;;;;5520:124;;5606:33;5633:5;5606:33;;;5593:46;;5587:57;;;;5652:145;5733:6;5728:3;5723;5710:30;5789:1;5780:6;5775:3;5771:16;5764:27;5703:94;;;;5805:100;5883:1;5876:5;5873:12;5863:2;;5889:9;5863:2;5857:48;;5912:117;5981:24;5999:5;5981:24;;;5974:5;5971:35;5961:2;;6020:1;6017;6010:12;5961:2;5955:74;;6036:111;6102:21;6117:5;6102:21;;;6095:5;6092:32;6082:2;;6138:1;6135;6128:12;6082:2;6076:71;;6154:103;6232:1;6225:5;6222:12;6212:2;;6248:1;6245;6238:12;6212:2;6206:51;;6264:117;6333:24;6351:5;6333:24;;;6326:5;6323:35;6313:2;;6372:1;6369;6362:12;6313:2;6307:74;",
+  "source": "pragma solidity >0.4.0 <0.7.4;\r\npragma experimental ABIEncoderV2;\r\nimport './Ownable.sol';\r\nimport './OwnerFactory.sol';\r\nimport './ERC721.sol';\r\n\r\ncontract PointsFactory is Ownable{\r\n\r\nevent NewPoint();\r\n\r\n enum types{\r\n    free, innovation, creativity, helpful, trustworthy, resourceful\r\n}\r\n\r\nstruct Point{\r\nuint id;\r\ntypes Mytype ;\r\nbool tradable;\r\n}\r\nuint pid=0;\r\n\r\nPoint[] public points;\r\nmapping (uint => address) public pointToOwner;\r\nmapping (address => uint) ownerPointCount;\r\nmapping (string => PointsFactory.types) public typetostring;\r\n\r\nfunction createPoint() internal returns(Point memory){\r\n    types temp = types.free;\r\n    Point memory p1=Point(pid++,temp, true);\r\n    points.push(p1);\r\n    uint id = points.length - 1;\r\n    pointToOwner[id] = msg.sender;\r\n    ownerPointCount[msg.sender]++;\r\n    typetostring[\"f\"]=types.free;\r\n    typetostring[\"i\"]=types.innovation;\r\n    typetostring[\"c\"]=types.creativity;\r\n    typetostring[\"t\"]=types.trustworthy;\r\n    typetostring[\"h\"]=types.helpful;\r\n    typetostring[\"r\"]=types.resourceful;\r\n   // emit NewPoint();\r\n    return p1;\r\n}\r\n\r\nmodifier onlyownerof(uint id){\r\n    require(msg.sender == pointToOwner[id]);\r\n    _;\r\n}\r\nfunction getmytype(Point memory p) public returns (types){\r\n    return p.Mytype;\r\n}\r\n\r\n}",
+  "sourcePath": "E:\\Uni\\Junior\\COVID - 5679\\contracts\\PointsFactory.sol",
+  "ast": {
+    "absolutePath": "/E/Uni/Junior/COVID - 5679/contracts/PointsFactory.sol",
+    "exportedSymbols": {
+      "PointsFactory": [
+        698
+      ]
+    },
+    "id": 699,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 541,
+        "literals": [
+          "solidity",
+          ">",
+          "0.4",
+          ".0",
+          "<",
+          "0.7",
+          ".4"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:30:4"
+      },
+      {
+        "id": 542,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:33:4"
+      },
+      {
+        "absolutePath": "/E/Uni/Junior/COVID - 5679/contracts/Ownable.sol",
+        "file": "./Ownable.sol",
+        "id": 543,
+        "nodeType": "ImportDirective",
+        "scope": 699,
+        "sourceUnit": 172,
+        "src": "67:23:4",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/E/Uni/Junior/COVID - 5679/contracts/OwnerFactory.sol",
+        "file": "./OwnerFactory.sol",
+        "id": 544,
+        "nodeType": "ImportDirective",
+        "scope": 699,
+        "sourceUnit": 540,
+        "src": "92:28:4",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/E/Uni/Junior/COVID - 5679/contracts/ERC721.sol",
+        "file": "./ERC721.sol",
+        "id": 545,
+        "nodeType": "ImportDirective",
+        "scope": 699,
+        "sourceUnit": 26,
+        "src": "122:22:4",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 546,
+              "name": "Ownable",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 171,
+              "src": "174:7:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Ownable_$171",
+                "typeString": "contract Ownable"
+              }
+            },
+            "id": 547,
+            "nodeType": "InheritanceSpecifier",
+            "src": "174:7:4"
+          }
+        ],
+        "contractDependencies": [
+          171
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 698,
+        "linearizedBaseContracts": [
+          698,
+          171
+        ],
+        "name": "PointsFactory",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 549,
+            "name": "NewPoint",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 548,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "200:2:4"
+            },
+            "src": "186:17:4"
+          },
+          {
+            "canonicalName": "PointsFactory.types",
+            "id": 556,
+            "members": [
+              {
+                "id": 550,
+                "name": "free",
+                "nodeType": "EnumValue",
+                "src": "225:4:4"
+              },
+              {
+                "id": 551,
+                "name": "innovation",
+                "nodeType": "EnumValue",
+                "src": "231:10:4"
+              },
+              {
+                "id": 552,
+                "name": "creativity",
+                "nodeType": "EnumValue",
+                "src": "243:10:4"
+              },
+              {
+                "id": 553,
+                "name": "helpful",
+                "nodeType": "EnumValue",
+                "src": "255:7:4"
+              },
+              {
+                "id": 554,
+                "name": "trustworthy",
+                "nodeType": "EnumValue",
+                "src": "264:11:4"
+              },
+              {
+                "id": 555,
+                "name": "resourceful",
+                "nodeType": "EnumValue",
+                "src": "277:11:4"
+              }
+            ],
+            "name": "types",
+            "nodeType": "EnumDefinition",
+            "src": "208:83:4"
+          },
+          {
+            "canonicalName": "PointsFactory.Point",
+            "id": 563,
+            "members": [
+              {
+                "constant": false,
+                "id": 558,
+                "name": "id",
+                "nodeType": "VariableDeclaration",
+                "scope": 563,
+                "src": "310:7:4",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 557,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "310:4:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 560,
+                "name": "Mytype",
+                "nodeType": "VariableDeclaration",
+                "scope": 563,
+                "src": "320:12:4",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_enum$_types_$556",
+                  "typeString": "enum PointsFactory.types"
+                },
+                "typeName": {
+                  "contractScope": null,
+                  "id": 559,
+                  "name": "types",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 556,
+                  "src": "320:5:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_types_$556",
+                    "typeString": "enum PointsFactory.types"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 562,
+                "name": "tradable",
+                "nodeType": "VariableDeclaration",
+                "scope": 563,
+                "src": "336:13:4",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 561,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "336:4:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Point",
+            "nodeType": "StructDefinition",
+            "scope": 698,
+            "src": "295:58:4",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 566,
+            "name": "pid",
+            "nodeType": "VariableDeclaration",
+            "scope": 698,
+            "src": "355:10:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 564,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "355:4:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "30",
+              "id": 565,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "364:1:4",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_0_by_1",
+                "typeString": "int_const 0"
+              },
+              "value": "0"
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 569,
+            "name": "points",
+            "nodeType": "VariableDeclaration",
+            "scope": 698,
+            "src": "370:21:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_struct$_Point_$563_storage_$dyn_storage",
+              "typeString": "struct PointsFactory.Point[]"
+            },
+            "typeName": {
+              "baseType": {
+                "contractScope": null,
+                "id": 567,
+                "name": "Point",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 563,
+                "src": "370:5:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Point_$563_storage_ptr",
+                  "typeString": "struct PointsFactory.Point"
+                }
+              },
+              "id": 568,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "370:7:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_struct$_Point_$563_storage_$dyn_storage_ptr",
+                "typeString": "struct PointsFactory.Point[]"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 573,
+            "name": "pointToOwner",
+            "nodeType": "VariableDeclaration",
+            "scope": 698,
+            "src": "394:45:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_address_$",
+              "typeString": "mapping(uint256 => address)"
+            },
+            "typeName": {
+              "id": 572,
+              "keyType": {
+                "id": 570,
+                "name": "uint",
+                "nodeType": "ElementaryTypeName",
+                "src": "403:4:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "394:25:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_address_$",
+                "typeString": "mapping(uint256 => address)"
+              },
+              "valueType": {
+                "id": 571,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "411:7:4",
+                "stateMutability": "nonpayable",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 577,
+            "name": "ownerPointCount",
+            "nodeType": "VariableDeclaration",
+            "scope": 698,
+            "src": "442:41:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+              "typeString": "mapping(address => uint256)"
+            },
+            "typeName": {
+              "id": 576,
+              "keyType": {
+                "id": 574,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "451:7:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "442:25:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                "typeString": "mapping(address => uint256)"
+              },
+              "valueType": {
+                "id": 575,
+                "name": "uint",
+                "nodeType": "ElementaryTypeName",
+                "src": "462:4:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 581,
+            "name": "typetostring",
+            "nodeType": "VariableDeclaration",
+            "scope": 698,
+            "src": "486:59:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_string_memory_$_t_enum$_types_$556_$",
+              "typeString": "mapping(string => enum PointsFactory.types)"
+            },
+            "typeName": {
+              "id": 580,
+              "keyType": {
+                "id": 578,
+                "name": "string",
+                "nodeType": "ElementaryTypeName",
+                "src": "495:6:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "486:39:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_string_memory_$_t_enum$_types_$556_$",
+                "typeString": "mapping(string => enum PointsFactory.types)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 579,
+                "name": "PointsFactory.types",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 556,
+                "src": "505:19:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_enum$_types_$556",
+                  "typeString": "enum PointsFactory.types"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 670,
+              "nodeType": "Block",
+              "src": "603:487:4",
+              "statements": [
+                {
+                  "assignments": [
+                    587
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 587,
+                      "name": "temp",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 670,
+                      "src": "610:10:4",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_types_$556",
+                        "typeString": "enum PointsFactory.types"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 586,
+                        "name": "types",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 556,
+                        "src": "610:5:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_enum$_types_$556",
+                          "typeString": "enum PointsFactory.types"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 590,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 588,
+                      "name": "types",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 556,
+                      "src": "623:5:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_enum$_types_$556_$",
+                        "typeString": "type(enum PointsFactory.types)"
+                      }
+                    },
+                    "id": 589,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "lValueRequested": false,
+                    "memberName": "free",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": null,
+                    "src": "623:10:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_types_$556",
+                      "typeString": "enum PointsFactory.types"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "610:23:4"
+                },
+                {
+                  "assignments": [
+                    592
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 592,
+                      "name": "p1",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 670,
+                      "src": "640:15:4",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Point_$563_memory_ptr",
+                        "typeString": "struct PointsFactory.Point"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 591,
+                        "name": "Point",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 563,
+                        "src": "640:5:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Point_$563_storage_ptr",
+                          "typeString": "struct PointsFactory.Point"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 599,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 595,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "UnaryOperation",
+                        "operator": "++",
+                        "prefix": false,
+                        "src": "662:5:4",
+                        "subExpression": {
+                          "argumentTypes": null,
+                          "id": 594,
+                          "name": "pid",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 566,
+                          "src": "662:3:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 596,
+                        "name": "temp",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 587,
+                        "src": "668:4:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_enum$_types_$556",
+                          "typeString": "enum PointsFactory.types"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "74727565",
+                        "id": 597,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "bool",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "674:4:4",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        "value": "true"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_enum$_types_$556",
+                          "typeString": "enum PointsFactory.types"
+                        },
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 593,
+                      "name": "Point",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 563,
+                      "src": "656:5:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_struct$_Point_$563_storage_ptr_$",
+                        "typeString": "type(struct PointsFactory.Point storage pointer)"
+                      }
+                    },
+                    "id": 598,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "structConstructorCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "656:23:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Point_$563_memory",
+                      "typeString": "struct PointsFactory.Point memory"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "640:39:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 603,
+                        "name": "p1",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 592,
+                        "src": "698:2:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Point_$563_memory_ptr",
+                          "typeString": "struct PointsFactory.Point memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_struct$_Point_$563_memory_ptr",
+                          "typeString": "struct PointsFactory.Point memory"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 600,
+                        "name": "points",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 569,
+                        "src": "686:6:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_Point_$563_storage_$dyn_storage",
+                          "typeString": "struct PointsFactory.Point storage ref[] storage ref"
+                        }
+                      },
+                      "id": 602,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "686:11:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_Point_$563_storage_$returns$_t_uint256_$",
+                        "typeString": "function (struct PointsFactory.Point storage ref) returns (uint256)"
+                      }
+                    },
+                    "id": 604,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "686:15:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 605,
+                  "nodeType": "ExpressionStatement",
+                  "src": "686:15:4"
+                },
+                {
+                  "assignments": [
+                    607
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 607,
+                      "name": "id",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 670,
+                      "src": "708:7:4",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 606,
+                        "name": "uint",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "708:4:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 612,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 611,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 608,
+                        "name": "points",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 569,
+                        "src": "718:6:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_Point_$563_storage_$dyn_storage",
+                          "typeString": "struct PointsFactory.Point storage ref[] storage ref"
+                        }
+                      },
+                      "id": 609,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "length",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "718:13:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "-",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "31",
+                      "id": 610,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "734:1:4",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_1_by_1",
+                        "typeString": "int_const 1"
+                      },
+                      "value": "1"
+                    },
+                    "src": "718:17:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "708:27:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 618,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 613,
+                        "name": "pointToOwner",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 573,
+                        "src": "742:12:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_address_$",
+                          "typeString": "mapping(uint256 => address)"
+                        }
+                      },
+                      "id": 615,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 614,
+                        "name": "id",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 607,
+                        "src": "755:2:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "742:16:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 616,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 895,
+                        "src": "761:3:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 617,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "761:10:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "src": "742:29:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 619,
+                  "nodeType": "ExpressionStatement",
+                  "src": "742:29:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 624,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "UnaryOperation",
+                    "operator": "++",
+                    "prefix": false,
+                    "src": "778:29:4",
+                    "subExpression": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 620,
+                        "name": "ownerPointCount",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 577,
+                        "src": "778:15:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                          "typeString": "mapping(address => uint256)"
+                        }
+                      },
+                      "id": 623,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 621,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 895,
+                          "src": "794:3:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 622,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "794:10:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "778:27:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 625,
+                  "nodeType": "ExpressionStatement",
+                  "src": "778:29:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 631,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 626,
+                        "name": "typetostring",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 581,
+                        "src": "814:12:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_string_memory_$_t_enum$_types_$556_$",
+                          "typeString": "mapping(string memory => enum PointsFactory.types)"
+                        }
+                      },
+                      "id": 628,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "hexValue": "66",
+                        "id": 627,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "827:3:4",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_d1e8aeb79500496ef3dc2e57ba746a8315d048b7a664a2bf948db4fa91960483",
+                          "typeString": "literal_string \"f\""
+                        },
+                        "value": "f"
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "814:17:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_types_$556",
+                        "typeString": "enum PointsFactory.types"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 629,
+                        "name": "types",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 556,
+                        "src": "832:5:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_enum$_types_$556_$",
+                          "typeString": "type(enum PointsFactory.types)"
+                        }
+                      },
+                      "id": 630,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "memberName": "free",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "832:10:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_types_$556",
+                        "typeString": "enum PointsFactory.types"
+                      }
+                    },
+                    "src": "814:28:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_types_$556",
+                      "typeString": "enum PointsFactory.types"
+                    }
+                  },
+                  "id": 632,
+                  "nodeType": "ExpressionStatement",
+                  "src": "814:28:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 638,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 633,
+                        "name": "typetostring",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 581,
+                        "src": "849:12:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_string_memory_$_t_enum$_types_$556_$",
+                          "typeString": "mapping(string memory => enum PointsFactory.types)"
+                        }
+                      },
+                      "id": 635,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "hexValue": "69",
+                        "id": 634,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "862:3:4",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_ea00237ef11bd9615a3b6d2629f2c6259d67b19bb94947a1bd739bae3415141c",
+                          "typeString": "literal_string \"i\""
+                        },
+                        "value": "i"
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "849:17:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_types_$556",
+                        "typeString": "enum PointsFactory.types"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 636,
+                        "name": "types",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 556,
+                        "src": "867:5:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_enum$_types_$556_$",
+                          "typeString": "type(enum PointsFactory.types)"
+                        }
+                      },
+                      "id": 637,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "memberName": "innovation",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "867:16:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_types_$556",
+                        "typeString": "enum PointsFactory.types"
+                      }
+                    },
+                    "src": "849:34:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_types_$556",
+                      "typeString": "enum PointsFactory.types"
+                    }
+                  },
+                  "id": 639,
+                  "nodeType": "ExpressionStatement",
+                  "src": "849:34:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 645,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 640,
+                        "name": "typetostring",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 581,
+                        "src": "890:12:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_string_memory_$_t_enum$_types_$556_$",
+                          "typeString": "mapping(string memory => enum PointsFactory.types)"
+                        }
+                      },
+                      "id": 642,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "hexValue": "63",
+                        "id": 641,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "903:3:4",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_0b42b6393c1f53060fe3ddbfcd7aadcca894465a5a438f69c87d790b2299b9b2",
+                          "typeString": "literal_string \"c\""
+                        },
+                        "value": "c"
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "890:17:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_types_$556",
+                        "typeString": "enum PointsFactory.types"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 643,
+                        "name": "types",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 556,
+                        "src": "908:5:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_enum$_types_$556_$",
+                          "typeString": "type(enum PointsFactory.types)"
+                        }
+                      },
+                      "id": 644,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "memberName": "creativity",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "908:16:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_types_$556",
+                        "typeString": "enum PointsFactory.types"
+                      }
+                    },
+                    "src": "890:34:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_types_$556",
+                      "typeString": "enum PointsFactory.types"
+                    }
+                  },
+                  "id": 646,
+                  "nodeType": "ExpressionStatement",
+                  "src": "890:34:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 652,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 647,
+                        "name": "typetostring",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 581,
+                        "src": "931:12:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_string_memory_$_t_enum$_types_$556_$",
+                          "typeString": "mapping(string memory => enum PointsFactory.types)"
+                        }
+                      },
+                      "id": 649,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "hexValue": "74",
+                        "id": 648,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "944:3:4",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_cac1bb71f0a97c8ac94ca9546b43178a9ad254c7b757ac07433aa6df35cd8089",
+                          "typeString": "literal_string \"t\""
+                        },
+                        "value": "t"
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "931:17:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_types_$556",
+                        "typeString": "enum PointsFactory.types"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 650,
+                        "name": "types",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 556,
+                        "src": "949:5:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_enum$_types_$556_$",
+                          "typeString": "type(enum PointsFactory.types)"
+                        }
+                      },
+                      "id": 651,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "memberName": "trustworthy",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "949:17:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_types_$556",
+                        "typeString": "enum PointsFactory.types"
+                      }
+                    },
+                    "src": "931:35:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_types_$556",
+                      "typeString": "enum PointsFactory.types"
+                    }
+                  },
+                  "id": 653,
+                  "nodeType": "ExpressionStatement",
+                  "src": "931:35:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 659,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 654,
+                        "name": "typetostring",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 581,
+                        "src": "973:12:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_string_memory_$_t_enum$_types_$556_$",
+                          "typeString": "mapping(string memory => enum PointsFactory.types)"
+                        }
+                      },
+                      "id": 656,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "hexValue": "68",
+                        "id": 655,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "986:3:4",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_a766932420cc6e9072394bef2c036ad8972c44696fee29397bd5e2c06001f615",
+                          "typeString": "literal_string \"h\""
+                        },
+                        "value": "h"
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "973:17:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_types_$556",
+                        "typeString": "enum PointsFactory.types"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 657,
+                        "name": "types",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 556,
+                        "src": "991:5:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_enum$_types_$556_$",
+                          "typeString": "type(enum PointsFactory.types)"
+                        }
+                      },
+                      "id": 658,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "memberName": "helpful",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "991:13:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_types_$556",
+                        "typeString": "enum PointsFactory.types"
+                      }
+                    },
+                    "src": "973:31:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_types_$556",
+                      "typeString": "enum PointsFactory.types"
+                    }
+                  },
+                  "id": 660,
+                  "nodeType": "ExpressionStatement",
+                  "src": "973:31:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 666,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 661,
+                        "name": "typetostring",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 581,
+                        "src": "1011:12:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_string_memory_$_t_enum$_types_$556_$",
+                          "typeString": "mapping(string memory => enum PointsFactory.types)"
+                        }
+                      },
+                      "id": 663,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "hexValue": "72",
+                        "id": 662,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1024:3:4",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_414f72a4d550cad29f17d9d99a4af64b3776ec5538cd440cef0f03fef2e9e010",
+                          "typeString": "literal_string \"r\""
+                        },
+                        "value": "r"
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "1011:17:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_types_$556",
+                        "typeString": "enum PointsFactory.types"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 664,
+                        "name": "types",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 556,
+                        "src": "1029:5:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_enum$_types_$556_$",
+                          "typeString": "type(enum PointsFactory.types)"
+                        }
+                      },
+                      "id": 665,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "memberName": "resourceful",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "1029:17:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_types_$556",
+                        "typeString": "enum PointsFactory.types"
+                      }
+                    },
+                    "src": "1011:35:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_types_$556",
+                      "typeString": "enum PointsFactory.types"
+                    }
+                  },
+                  "id": 667,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1011:35:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 668,
+                    "name": "p1",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 592,
+                    "src": "1084:2:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Point_$563_memory_ptr",
+                      "typeString": "struct PointsFactory.Point memory"
+                    }
+                  },
+                  "functionReturnParameters": 585,
+                  "id": 669,
+                  "nodeType": "Return",
+                  "src": "1077:9:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 671,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "createPoint",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 582,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "570:2:4"
+            },
+            "returnParameters": {
+              "id": 585,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 584,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 671,
+                  "src": "590:12:4",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Point_$563_memory_ptr",
+                    "typeString": "struct PointsFactory.Point"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 583,
+                    "name": "Point",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 563,
+                    "src": "590:5:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Point_$563_storage_ptr",
+                      "typeString": "struct PointsFactory.Point"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "589:14:4"
+            },
+            "scope": 698,
+            "src": "550:540:4",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 685,
+              "nodeType": "Block",
+              "src": "1123:58:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        "id": 681,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 676,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 895,
+                            "src": "1138:3:4",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 677,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "1138:10:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "baseExpression": {
+                            "argumentTypes": null,
+                            "id": 678,
+                            "name": "pointToOwner",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 573,
+                            "src": "1152:12:4",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_mapping$_t_uint256_$_t_address_$",
+                              "typeString": "mapping(uint256 => address)"
+                            }
+                          },
+                          "id": 680,
+                          "indexExpression": {
+                            "argumentTypes": null,
+                            "id": 679,
+                            "name": "id",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 673,
+                            "src": "1165:2:4",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "IndexAccess",
+                          "src": "1152:16:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "src": "1138:30:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 675,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        898,
+                        899
+                      ],
+                      "referencedDeclaration": 898,
+                      "src": "1130:7:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 682,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1130:39:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 683,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1130:39:4"
+                },
+                {
+                  "id": 684,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "1176:1:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 686,
+            "name": "onlyownerof",
+            "nodeType": "ModifierDefinition",
+            "parameters": {
+              "id": 674,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 673,
+                  "name": "id",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 686,
+                  "src": "1115:7:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 672,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1115:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1114:9:4"
+            },
+            "src": "1094:87:4",
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 696,
+              "nodeType": "Block",
+              "src": "1240:26:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 693,
+                      "name": "p",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 688,
+                      "src": "1254:1:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Point_$563_memory_ptr",
+                        "typeString": "struct PointsFactory.Point memory"
+                      }
+                    },
+                    "id": 694,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "Mytype",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 560,
+                    "src": "1254:8:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_types_$556",
+                      "typeString": "enum PointsFactory.types"
+                    }
+                  },
+                  "functionReturnParameters": 692,
+                  "id": 695,
+                  "nodeType": "Return",
+                  "src": "1247:15:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 697,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getmytype",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 689,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 688,
+                  "name": "p",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 697,
+                  "src": "1202:14:4",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Point_$563_memory_ptr",
+                    "typeString": "struct PointsFactory.Point"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 687,
+                    "name": "Point",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 563,
+                    "src": "1202:5:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Point_$563_storage_ptr",
+                      "typeString": "struct PointsFactory.Point"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1201:16:4"
+            },
+            "returnParameters": {
+              "id": 692,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 691,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 697,
+                  "src": "1234:5:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_types_$556",
+                    "typeString": "enum PointsFactory.types"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 690,
+                    "name": "types",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 556,
+                    "src": "1234:5:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_types_$556",
+                      "typeString": "enum PointsFactory.types"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1233:7:4"
+            },
+            "scope": 698,
+            "src": "1183:83:4",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 699,
+        "src": "148:1123:4"
+      }
+    ],
+    "src": "0:1271:4"
+  },
+  "legacyAST": {
+    "absolutePath": "/E/Uni/Junior/COVID - 5679/contracts/PointsFactory.sol",
+    "exportedSymbols": {
+      "PointsFactory": [
+        698
+      ]
+    },
+    "id": 699,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 541,
+        "literals": [
+          "solidity",
+          ">",
+          "0.4",
+          ".0",
+          "<",
+          "0.7",
+          ".4"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:30:4"
+      },
+      {
+        "id": 542,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:33:4"
+      },
+      {
+        "absolutePath": "/E/Uni/Junior/COVID - 5679/contracts/Ownable.sol",
+        "file": "./Ownable.sol",
+        "id": 543,
+        "nodeType": "ImportDirective",
+        "scope": 699,
+        "sourceUnit": 172,
+        "src": "67:23:4",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/E/Uni/Junior/COVID - 5679/contracts/OwnerFactory.sol",
+        "file": "./OwnerFactory.sol",
+        "id": 544,
+        "nodeType": "ImportDirective",
+        "scope": 699,
+        "sourceUnit": 540,
+        "src": "92:28:4",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/E/Uni/Junior/COVID - 5679/contracts/ERC721.sol",
+        "file": "./ERC721.sol",
+        "id": 545,
+        "nodeType": "ImportDirective",
+        "scope": 699,
+        "sourceUnit": 26,
+        "src": "122:22:4",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 546,
+              "name": "Ownable",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 171,
+              "src": "174:7:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Ownable_$171",
+                "typeString": "contract Ownable"
+              }
+            },
+            "id": 547,
+            "nodeType": "InheritanceSpecifier",
+            "src": "174:7:4"
+          }
+        ],
+        "contractDependencies": [
+          171
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 698,
+        "linearizedBaseContracts": [
+          698,
+          171
+        ],
+        "name": "PointsFactory",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 549,
+            "name": "NewPoint",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 548,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "200:2:4"
+            },
+            "src": "186:17:4"
+          },
+          {
+            "canonicalName": "PointsFactory.types",
+            "id": 556,
+            "members": [
+              {
+                "id": 550,
+                "name": "free",
+                "nodeType": "EnumValue",
+                "src": "225:4:4"
+              },
+              {
+                "id": 551,
+                "name": "innovation",
+                "nodeType": "EnumValue",
+                "src": "231:10:4"
+              },
+              {
+                "id": 552,
+                "name": "creativity",
+                "nodeType": "EnumValue",
+                "src": "243:10:4"
+              },
+              {
+                "id": 553,
+                "name": "helpful",
+                "nodeType": "EnumValue",
+                "src": "255:7:4"
+              },
+              {
+                "id": 554,
+                "name": "trustworthy",
+                "nodeType": "EnumValue",
+                "src": "264:11:4"
+              },
+              {
+                "id": 555,
+                "name": "resourceful",
+                "nodeType": "EnumValue",
+                "src": "277:11:4"
+              }
+            ],
+            "name": "types",
+            "nodeType": "EnumDefinition",
+            "src": "208:83:4"
+          },
+          {
+            "canonicalName": "PointsFactory.Point",
+            "id": 563,
+            "members": [
+              {
+                "constant": false,
+                "id": 558,
+                "name": "id",
+                "nodeType": "VariableDeclaration",
+                "scope": 563,
+                "src": "310:7:4",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 557,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "310:4:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 560,
+                "name": "Mytype",
+                "nodeType": "VariableDeclaration",
+                "scope": 563,
+                "src": "320:12:4",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_enum$_types_$556",
+                  "typeString": "enum PointsFactory.types"
+                },
+                "typeName": {
+                  "contractScope": null,
+                  "id": 559,
+                  "name": "types",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 556,
+                  "src": "320:5:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_types_$556",
+                    "typeString": "enum PointsFactory.types"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 562,
+                "name": "tradable",
+                "nodeType": "VariableDeclaration",
+                "scope": 563,
+                "src": "336:13:4",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 561,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "336:4:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Point",
+            "nodeType": "StructDefinition",
+            "scope": 698,
+            "src": "295:58:4",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 566,
+            "name": "pid",
+            "nodeType": "VariableDeclaration",
+            "scope": 698,
+            "src": "355:10:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 564,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "355:4:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "30",
+              "id": 565,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "364:1:4",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_0_by_1",
+                "typeString": "int_const 0"
+              },
+              "value": "0"
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 569,
+            "name": "points",
+            "nodeType": "VariableDeclaration",
+            "scope": 698,
+            "src": "370:21:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_struct$_Point_$563_storage_$dyn_storage",
+              "typeString": "struct PointsFactory.Point[]"
+            },
+            "typeName": {
+              "baseType": {
+                "contractScope": null,
+                "id": 567,
+                "name": "Point",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 563,
+                "src": "370:5:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Point_$563_storage_ptr",
+                  "typeString": "struct PointsFactory.Point"
+                }
+              },
+              "id": 568,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "370:7:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_struct$_Point_$563_storage_$dyn_storage_ptr",
+                "typeString": "struct PointsFactory.Point[]"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 573,
+            "name": "pointToOwner",
+            "nodeType": "VariableDeclaration",
+            "scope": 698,
+            "src": "394:45:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_address_$",
+              "typeString": "mapping(uint256 => address)"
+            },
+            "typeName": {
+              "id": 572,
+              "keyType": {
+                "id": 570,
+                "name": "uint",
+                "nodeType": "ElementaryTypeName",
+                "src": "403:4:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "394:25:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_address_$",
+                "typeString": "mapping(uint256 => address)"
+              },
+              "valueType": {
+                "id": 571,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "411:7:4",
+                "stateMutability": "nonpayable",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 577,
+            "name": "ownerPointCount",
+            "nodeType": "VariableDeclaration",
+            "scope": 698,
+            "src": "442:41:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+              "typeString": "mapping(address => uint256)"
+            },
+            "typeName": {
+              "id": 576,
+              "keyType": {
+                "id": 574,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "451:7:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "442:25:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                "typeString": "mapping(address => uint256)"
+              },
+              "valueType": {
+                "id": 575,
+                "name": "uint",
+                "nodeType": "ElementaryTypeName",
+                "src": "462:4:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 581,
+            "name": "typetostring",
+            "nodeType": "VariableDeclaration",
+            "scope": 698,
+            "src": "486:59:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_string_memory_$_t_enum$_types_$556_$",
+              "typeString": "mapping(string => enum PointsFactory.types)"
+            },
+            "typeName": {
+              "id": 580,
+              "keyType": {
+                "id": 578,
+                "name": "string",
+                "nodeType": "ElementaryTypeName",
+                "src": "495:6:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "486:39:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_string_memory_$_t_enum$_types_$556_$",
+                "typeString": "mapping(string => enum PointsFactory.types)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 579,
+                "name": "PointsFactory.types",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 556,
+                "src": "505:19:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_enum$_types_$556",
+                  "typeString": "enum PointsFactory.types"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 670,
+              "nodeType": "Block",
+              "src": "603:487:4",
+              "statements": [
+                {
+                  "assignments": [
+                    587
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 587,
+                      "name": "temp",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 670,
+                      "src": "610:10:4",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_types_$556",
+                        "typeString": "enum PointsFactory.types"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 586,
+                        "name": "types",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 556,
+                        "src": "610:5:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_enum$_types_$556",
+                          "typeString": "enum PointsFactory.types"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 590,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 588,
+                      "name": "types",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 556,
+                      "src": "623:5:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_enum$_types_$556_$",
+                        "typeString": "type(enum PointsFactory.types)"
+                      }
+                    },
+                    "id": 589,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "lValueRequested": false,
+                    "memberName": "free",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": null,
+                    "src": "623:10:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_types_$556",
+                      "typeString": "enum PointsFactory.types"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "610:23:4"
+                },
+                {
+                  "assignments": [
+                    592
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 592,
+                      "name": "p1",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 670,
+                      "src": "640:15:4",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Point_$563_memory_ptr",
+                        "typeString": "struct PointsFactory.Point"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 591,
+                        "name": "Point",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 563,
+                        "src": "640:5:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Point_$563_storage_ptr",
+                          "typeString": "struct PointsFactory.Point"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 599,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 595,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "UnaryOperation",
+                        "operator": "++",
+                        "prefix": false,
+                        "src": "662:5:4",
+                        "subExpression": {
+                          "argumentTypes": null,
+                          "id": 594,
+                          "name": "pid",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 566,
+                          "src": "662:3:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 596,
+                        "name": "temp",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 587,
+                        "src": "668:4:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_enum$_types_$556",
+                          "typeString": "enum PointsFactory.types"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "74727565",
+                        "id": 597,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "bool",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "674:4:4",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        "value": "true"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_enum$_types_$556",
+                          "typeString": "enum PointsFactory.types"
+                        },
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 593,
+                      "name": "Point",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 563,
+                      "src": "656:5:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_struct$_Point_$563_storage_ptr_$",
+                        "typeString": "type(struct PointsFactory.Point storage pointer)"
+                      }
+                    },
+                    "id": 598,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "structConstructorCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "656:23:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Point_$563_memory",
+                      "typeString": "struct PointsFactory.Point memory"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "640:39:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 603,
+                        "name": "p1",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 592,
+                        "src": "698:2:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Point_$563_memory_ptr",
+                          "typeString": "struct PointsFactory.Point memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_struct$_Point_$563_memory_ptr",
+                          "typeString": "struct PointsFactory.Point memory"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 600,
+                        "name": "points",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 569,
+                        "src": "686:6:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_Point_$563_storage_$dyn_storage",
+                          "typeString": "struct PointsFactory.Point storage ref[] storage ref"
+                        }
+                      },
+                      "id": 602,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "686:11:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_Point_$563_storage_$returns$_t_uint256_$",
+                        "typeString": "function (struct PointsFactory.Point storage ref) returns (uint256)"
+                      }
+                    },
+                    "id": 604,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "686:15:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 605,
+                  "nodeType": "ExpressionStatement",
+                  "src": "686:15:4"
+                },
+                {
+                  "assignments": [
+                    607
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 607,
+                      "name": "id",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 670,
+                      "src": "708:7:4",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 606,
+                        "name": "uint",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "708:4:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 612,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 611,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 608,
+                        "name": "points",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 569,
+                        "src": "718:6:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_Point_$563_storage_$dyn_storage",
+                          "typeString": "struct PointsFactory.Point storage ref[] storage ref"
+                        }
+                      },
+                      "id": 609,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "length",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "718:13:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "-",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "31",
+                      "id": 610,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "734:1:4",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_1_by_1",
+                        "typeString": "int_const 1"
+                      },
+                      "value": "1"
+                    },
+                    "src": "718:17:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "708:27:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 618,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 613,
+                        "name": "pointToOwner",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 573,
+                        "src": "742:12:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_address_$",
+                          "typeString": "mapping(uint256 => address)"
+                        }
+                      },
+                      "id": 615,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 614,
+                        "name": "id",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 607,
+                        "src": "755:2:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "742:16:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 616,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 895,
+                        "src": "761:3:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 617,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "761:10:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "src": "742:29:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 619,
+                  "nodeType": "ExpressionStatement",
+                  "src": "742:29:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 624,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "UnaryOperation",
+                    "operator": "++",
+                    "prefix": false,
+                    "src": "778:29:4",
+                    "subExpression": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 620,
+                        "name": "ownerPointCount",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 577,
+                        "src": "778:15:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                          "typeString": "mapping(address => uint256)"
+                        }
+                      },
+                      "id": 623,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 621,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 895,
+                          "src": "794:3:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 622,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "794:10:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "778:27:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 625,
+                  "nodeType": "ExpressionStatement",
+                  "src": "778:29:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 631,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 626,
+                        "name": "typetostring",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 581,
+                        "src": "814:12:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_string_memory_$_t_enum$_types_$556_$",
+                          "typeString": "mapping(string memory => enum PointsFactory.types)"
+                        }
+                      },
+                      "id": 628,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "hexValue": "66",
+                        "id": 627,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "827:3:4",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_d1e8aeb79500496ef3dc2e57ba746a8315d048b7a664a2bf948db4fa91960483",
+                          "typeString": "literal_string \"f\""
+                        },
+                        "value": "f"
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "814:17:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_types_$556",
+                        "typeString": "enum PointsFactory.types"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 629,
+                        "name": "types",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 556,
+                        "src": "832:5:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_enum$_types_$556_$",
+                          "typeString": "type(enum PointsFactory.types)"
+                        }
+                      },
+                      "id": 630,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "memberName": "free",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "832:10:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_types_$556",
+                        "typeString": "enum PointsFactory.types"
+                      }
+                    },
+                    "src": "814:28:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_types_$556",
+                      "typeString": "enum PointsFactory.types"
+                    }
+                  },
+                  "id": 632,
+                  "nodeType": "ExpressionStatement",
+                  "src": "814:28:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 638,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 633,
+                        "name": "typetostring",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 581,
+                        "src": "849:12:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_string_memory_$_t_enum$_types_$556_$",
+                          "typeString": "mapping(string memory => enum PointsFactory.types)"
+                        }
+                      },
+                      "id": 635,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "hexValue": "69",
+                        "id": 634,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "862:3:4",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_ea00237ef11bd9615a3b6d2629f2c6259d67b19bb94947a1bd739bae3415141c",
+                          "typeString": "literal_string \"i\""
+                        },
+                        "value": "i"
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "849:17:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_types_$556",
+                        "typeString": "enum PointsFactory.types"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 636,
+                        "name": "types",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 556,
+                        "src": "867:5:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_enum$_types_$556_$",
+                          "typeString": "type(enum PointsFactory.types)"
+                        }
+                      },
+                      "id": 637,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "memberName": "innovation",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "867:16:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_types_$556",
+                        "typeString": "enum PointsFactory.types"
+                      }
+                    },
+                    "src": "849:34:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_types_$556",
+                      "typeString": "enum PointsFactory.types"
+                    }
+                  },
+                  "id": 639,
+                  "nodeType": "ExpressionStatement",
+                  "src": "849:34:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 645,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 640,
+                        "name": "typetostring",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 581,
+                        "src": "890:12:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_string_memory_$_t_enum$_types_$556_$",
+                          "typeString": "mapping(string memory => enum PointsFactory.types)"
+                        }
+                      },
+                      "id": 642,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "hexValue": "63",
+                        "id": 641,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "903:3:4",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_0b42b6393c1f53060fe3ddbfcd7aadcca894465a5a438f69c87d790b2299b9b2",
+                          "typeString": "literal_string \"c\""
+                        },
+                        "value": "c"
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "890:17:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_types_$556",
+                        "typeString": "enum PointsFactory.types"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 643,
+                        "name": "types",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 556,
+                        "src": "908:5:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_enum$_types_$556_$",
+                          "typeString": "type(enum PointsFactory.types)"
+                        }
+                      },
+                      "id": 644,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "memberName": "creativity",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "908:16:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_types_$556",
+                        "typeString": "enum PointsFactory.types"
+                      }
+                    },
+                    "src": "890:34:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_types_$556",
+                      "typeString": "enum PointsFactory.types"
+                    }
+                  },
+                  "id": 646,
+                  "nodeType": "ExpressionStatement",
+                  "src": "890:34:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 652,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 647,
+                        "name": "typetostring",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 581,
+                        "src": "931:12:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_string_memory_$_t_enum$_types_$556_$",
+                          "typeString": "mapping(string memory => enum PointsFactory.types)"
+                        }
+                      },
+                      "id": 649,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "hexValue": "74",
+                        "id": 648,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "944:3:4",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_cac1bb71f0a97c8ac94ca9546b43178a9ad254c7b757ac07433aa6df35cd8089",
+                          "typeString": "literal_string \"t\""
+                        },
+                        "value": "t"
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "931:17:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_types_$556",
+                        "typeString": "enum PointsFactory.types"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 650,
+                        "name": "types",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 556,
+                        "src": "949:5:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_enum$_types_$556_$",
+                          "typeString": "type(enum PointsFactory.types)"
+                        }
+                      },
+                      "id": 651,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "memberName": "trustworthy",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "949:17:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_types_$556",
+                        "typeString": "enum PointsFactory.types"
+                      }
+                    },
+                    "src": "931:35:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_types_$556",
+                      "typeString": "enum PointsFactory.types"
+                    }
+                  },
+                  "id": 653,
+                  "nodeType": "ExpressionStatement",
+                  "src": "931:35:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 659,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 654,
+                        "name": "typetostring",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 581,
+                        "src": "973:12:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_string_memory_$_t_enum$_types_$556_$",
+                          "typeString": "mapping(string memory => enum PointsFactory.types)"
+                        }
+                      },
+                      "id": 656,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "hexValue": "68",
+                        "id": 655,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "986:3:4",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_a766932420cc6e9072394bef2c036ad8972c44696fee29397bd5e2c06001f615",
+                          "typeString": "literal_string \"h\""
+                        },
+                        "value": "h"
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "973:17:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_types_$556",
+                        "typeString": "enum PointsFactory.types"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 657,
+                        "name": "types",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 556,
+                        "src": "991:5:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_enum$_types_$556_$",
+                          "typeString": "type(enum PointsFactory.types)"
+                        }
+                      },
+                      "id": 658,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "memberName": "helpful",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "991:13:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_types_$556",
+                        "typeString": "enum PointsFactory.types"
+                      }
+                    },
+                    "src": "973:31:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_types_$556",
+                      "typeString": "enum PointsFactory.types"
+                    }
+                  },
+                  "id": 660,
+                  "nodeType": "ExpressionStatement",
+                  "src": "973:31:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 666,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 661,
+                        "name": "typetostring",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 581,
+                        "src": "1011:12:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_string_memory_$_t_enum$_types_$556_$",
+                          "typeString": "mapping(string memory => enum PointsFactory.types)"
+                        }
+                      },
+                      "id": 663,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "hexValue": "72",
+                        "id": 662,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1024:3:4",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_414f72a4d550cad29f17d9d99a4af64b3776ec5538cd440cef0f03fef2e9e010",
+                          "typeString": "literal_string \"r\""
+                        },
+                        "value": "r"
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "1011:17:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_types_$556",
+                        "typeString": "enum PointsFactory.types"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 664,
+                        "name": "types",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 556,
+                        "src": "1029:5:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_enum$_types_$556_$",
+                          "typeString": "type(enum PointsFactory.types)"
+                        }
+                      },
+                      "id": 665,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "memberName": "resourceful",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "1029:17:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_types_$556",
+                        "typeString": "enum PointsFactory.types"
+                      }
+                    },
+                    "src": "1011:35:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_types_$556",
+                      "typeString": "enum PointsFactory.types"
+                    }
+                  },
+                  "id": 667,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1011:35:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 668,
+                    "name": "p1",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 592,
+                    "src": "1084:2:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Point_$563_memory_ptr",
+                      "typeString": "struct PointsFactory.Point memory"
+                    }
+                  },
+                  "functionReturnParameters": 585,
+                  "id": 669,
+                  "nodeType": "Return",
+                  "src": "1077:9:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 671,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "createPoint",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 582,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "570:2:4"
+            },
+            "returnParameters": {
+              "id": 585,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 584,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 671,
+                  "src": "590:12:4",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Point_$563_memory_ptr",
+                    "typeString": "struct PointsFactory.Point"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 583,
+                    "name": "Point",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 563,
+                    "src": "590:5:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Point_$563_storage_ptr",
+                      "typeString": "struct PointsFactory.Point"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "589:14:4"
+            },
+            "scope": 698,
+            "src": "550:540:4",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 685,
+              "nodeType": "Block",
+              "src": "1123:58:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        "id": 681,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 676,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 895,
+                            "src": "1138:3:4",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 677,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "1138:10:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "baseExpression": {
+                            "argumentTypes": null,
+                            "id": 678,
+                            "name": "pointToOwner",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 573,
+                            "src": "1152:12:4",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_mapping$_t_uint256_$_t_address_$",
+                              "typeString": "mapping(uint256 => address)"
+                            }
+                          },
+                          "id": 680,
+                          "indexExpression": {
+                            "argumentTypes": null,
+                            "id": 679,
+                            "name": "id",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 673,
+                            "src": "1165:2:4",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "IndexAccess",
+                          "src": "1152:16:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "src": "1138:30:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 675,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        898,
+                        899
+                      ],
+                      "referencedDeclaration": 898,
+                      "src": "1130:7:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 682,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1130:39:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 683,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1130:39:4"
+                },
+                {
+                  "id": 684,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "1176:1:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 686,
+            "name": "onlyownerof",
+            "nodeType": "ModifierDefinition",
+            "parameters": {
+              "id": 674,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 673,
+                  "name": "id",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 686,
+                  "src": "1115:7:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 672,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1115:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1114:9:4"
+            },
+            "src": "1094:87:4",
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 696,
+              "nodeType": "Block",
+              "src": "1240:26:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 693,
+                      "name": "p",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 688,
+                      "src": "1254:1:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Point_$563_memory_ptr",
+                        "typeString": "struct PointsFactory.Point memory"
+                      }
+                    },
+                    "id": 694,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "Mytype",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 560,
+                    "src": "1254:8:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_types_$556",
+                      "typeString": "enum PointsFactory.types"
+                    }
+                  },
+                  "functionReturnParameters": 692,
+                  "id": 695,
+                  "nodeType": "Return",
+                  "src": "1247:15:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 697,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getmytype",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 689,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 688,
+                  "name": "p",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 697,
+                  "src": "1202:14:4",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Point_$563_memory_ptr",
+                    "typeString": "struct PointsFactory.Point"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 687,
+                    "name": "Point",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 563,
+                    "src": "1202:5:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Point_$563_storage_ptr",
+                      "typeString": "struct PointsFactory.Point"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1201:16:4"
+            },
+            "returnParameters": {
+              "id": 692,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 691,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 697,
+                  "src": "1234:5:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_types_$556",
+                    "typeString": "enum PointsFactory.types"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 690,
+                    "name": "types",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 556,
+                    "src": "1234:5:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_types_$556",
+                      "typeString": "enum PointsFactory.types"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1233:7:4"
+            },
+            "scope": 698,
+            "src": "1183:83:4",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 699,
+        "src": "148:1123:4"
+      }
+    ],
+    "src": "0:1271:4"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {
+        "0x633e0e937e29940db75f79567479575d2a237940ffd136a521595564dd974dcd": {
+          "anonymous": false,
+          "inputs": [],
+          "name": "NewPoint",
+          "type": "event"
+        },
+        "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "previousOwner",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "newOwner",
+              "type": "address"
+            }
+          ],
+          "name": "OwnershipTransferred",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x6A75936384B22D91588178516062bc6CBCaEa9E2",
+      "transactionHash": "0x9c123a2d044f6a69744311c3094d58af1e855a6ab8a8443cc819b7f7fa3f13f3"
+    }
+  },
+  "schemaVersion": "3.2.4",
+  "updatedAt": "2020-08-29T09:23:42.602Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "methods": {
+      "isOwner()": {
+        "return": "true if msg.sender is the owner of the contract."
+      },
+      "owner()": {
+        "return": "the address of the owner."
+      },
+      "renounceOwnership()": {
+        "details": "Allows the current owner to relinquish control of the contract."
+      },
+      "transferOwnership(address)": {
+        "details": "Allows the current owner to transfer control of the contract to a newOwner.",
+        "params": {
+          "newOwner": "The address to transfer ownership to."
+        }
+      }
+    }
+  },
+  "userdoc": {
+    "methods": {
+      "renounceOwnership()": {
+        "notice": "Renouncing to ownership will leave the contract without an owner. It will not be possible to call the functions with the onlyOwner modifier anymore."
+      }
+    }
+  }
+}
